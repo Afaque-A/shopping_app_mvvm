@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app_mvvm/Uitilies/Themes/theme.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -6,15 +7,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true
-      ),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Hello, World!'),
-        ),
-      ),
+      theme: UThemes.lightTheme,
+      darkTheme: UThemes.darkTheme,
+
+      home: const Scaffold(),
     );
-    
   }
 }
