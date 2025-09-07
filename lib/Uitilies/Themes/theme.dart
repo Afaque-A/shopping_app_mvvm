@@ -15,7 +15,7 @@ class UThemes {
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     brightness: Brightness.light,
-    fontFamily: '',
+    fontFamily: 'Nunito',
     primaryColor: UColors.primary,
     disabledColor: UColors.grey,
     textTheme: UTextTheme.lightTheme,
@@ -31,7 +31,7 @@ class UThemes {
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     brightness: Brightness.dark,
-    fontFamily: '',
+    fontFamily: 'Nunito',
     primaryColor: UColors.primary,
     disabledColor: UColors.grey,
     textTheme: UTextTheme.darkTheme,
