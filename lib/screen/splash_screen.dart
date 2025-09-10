@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+//import 'package:shopping_app_mvvm/auth/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -8,24 +10,47 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  chnageScreen() {
+    Future.delayed(Duration(seconds: 5), () {
+    //  Get.to(() => const LoginScreen());
+    });
+  }
+
+  @override
+  void initState() {
+    chnageScreen();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.tealAccent,
-      appBar: AppBar(title: Center(child: const Text('Splash Screen'))),
+      backgroundColor: Colors.white,
 
       body: Padding(
         padding: EdgeInsets.all(10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(
-              child: Text(
-                'Welcome to Shopping App',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Spacer(),
+              Image.asset(
+                'assets/logo/black_app_logo.png',
+                height: 250,
+                width: 250,
               ),
-            ),
-          ],
+
+              const Spacer(),
+              Text(
+                "Version 1.0.0",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
