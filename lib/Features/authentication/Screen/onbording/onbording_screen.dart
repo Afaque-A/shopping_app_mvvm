@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:shopping_app_mvvm/Features/authentication/Screen/onbording/widgets/onbording_dot_navigation.dart';
 import 'package:shopping_app_mvvm/Features/authentication/Screen/onbording/widgets/onbording_next_button.dart';
 import 'package:shopping_app_mvvm/Features/authentication/Screen/onbording/widgets/onbording_page.dart';
 import 'package:shopping_app_mvvm/Features/authentication/Screen/onbording/widgets/onbording_skip_button.dart';
+import 'package:shopping_app_mvvm/Features/authentication/controller/onbording/onbording_controller.dart';
 import 'package:shopping_app_mvvm/Uitilies/Constant/images.dart';
 import 'package:shopping_app_mvvm/Uitilies/Constant/sizes.dart';
 import 'package:shopping_app_mvvm/Uitilies/Constant/texts.dart';
@@ -13,12 +15,16 @@ class OnbordingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnbordingController());
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: USizes.defaultSpace),
         child: Stack(
           children: [
             PageView(
+              controller: controller.pageController,
+              onPageChanged: controller.updatePageIndicator,
+
               children: [
                 OnbordingPage(
                   animation: UImages.onbording1,

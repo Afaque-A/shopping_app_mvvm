@@ -6,7 +6,7 @@ import 'package:shopping_app_mvvm/Uitilies/Constant/texts.dart';
 import 'package:shopping_app_mvvm/Uitilies/helpers/device_helpers.dart';
 
 class OnbordingPage extends StatelessWidget {
-  OnbordingPage({
+  const OnbordingPage({
     super.key,
     required this.animation,
     required this.title,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app_mvvm/Features/authentication/controller/onbording/onbording_controller.dart';
 import 'package:shopping_app_mvvm/Uitilies/helpers/device_helpers.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -7,13 +8,16 @@ class OnbordingDotNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final controller = OnbordingController.instance;
     return  Positioned(
               bottom: UDeviceHelper.getBottomNavigationBarHeight() * 5,
               left: UDeviceHelper.getScreenWidth(context) / 3,
 
               right: UDeviceHelper.getScreenWidth(context) / 3,
               child: SmoothPageIndicator(
-                controller: PageController(),
+                controller: controller.pageController,
+                onDotClicked: controller.dotNavigationClick,
                 count: 3,
                 effect: ExpandingDotsEffect(
                   dotHeight: 10,
