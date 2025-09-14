@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shopping_app_mvvm/Features/authentication/Screen/login/login_screen.dart';
 
 class OnbordingController extends GetxController {
   static OnbordingController get instance => Get.find();
@@ -22,7 +23,8 @@ class OnbordingController extends GetxController {
   // Handle next page navigation
   void nextPage() {
     if (currentIndex.value == 2) {
-      // Navigate to home screen or main app screen
+      Get.offAll(() => const LoginScreen());
+
       return;
     }
     currentIndex.value++;

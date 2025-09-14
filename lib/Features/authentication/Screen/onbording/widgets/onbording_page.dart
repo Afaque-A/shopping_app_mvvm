@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:shopping_app_mvvm/Uitilies/Constant/images.dart';
-import 'package:shopping_app_mvvm/Uitilies/Constant/sizes.dart';
-import 'package:shopping_app_mvvm/Uitilies/Constant/texts.dart';
+
 import 'package:shopping_app_mvvm/Uitilies/helpers/device_helpers.dart';
 
 class OnbordingPage extends StatelessWidget {
