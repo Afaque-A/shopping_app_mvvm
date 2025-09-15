@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shopping_app_mvvm/Features/authentication/Screen/onbording/onbording_screen.dart';
 //import 'package:shopping_app_mvvm/auth/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -11,7 +13,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   chnageScreen() {
     Future.delayed(Duration(seconds: 5), () {
-    //  Get.to(() => const LoginScreen());
+     Get.to(() => const OnbordingScreen());
     });
   }
 

@@ -1,7 +1,6 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:shopping_app_mvvm/Uitilies/Constant/texts.dart';
 
 class FormDivider extends StatelessWidget {
   const FormDivider({super.key, required this.title});

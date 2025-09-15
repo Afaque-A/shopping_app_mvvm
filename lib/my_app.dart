@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shopping_app_mvvm/Features/authentication/Screen/onbording/onbording_screen.dart';
+import 'package:shopping_app_mvvm/Features/authentication/Screen/splashScreen/splash_screen.dart';
 import 'package:shopping_app_mvvm/Uitilies/Themes/theme.dart';
 
 class MyApp extends StatelessWidget {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: UThemes.lightTheme,
       darkTheme: UThemes.darkTheme,
 
-      home: const OnbordingScreen(),
+      home: const SplashScreen(),
     );
   }
 }

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:shopping_app_mvvm/Common/Widgets/Button/login_socialButtons.dart';
+import 'package:shopping_app_mvvm/Common/Widgets/Button/build_social_button.dart';
 import 'package:shopping_app_mvvm/Common/Widgets/Button/uelevated_button.dart';
 import 'package:shopping_app_mvvm/Common/Widgets/login%20SignUp/form_divider.dart';
 import 'package:shopping_app_mvvm/Features/authentication/Screen/login/widgets/checkBox.dart';
 import 'package:shopping_app_mvvm/Features/authentication/Screen/login/widgets/login_form.dart';
 import 'package:shopping_app_mvvm/Features/authentication/Screen/login/widgets/login_header.dart';
+import 'package:shopping_app_mvvm/Features/authentication/Screen/signup/signup_screen.dart';
 import 'package:shopping_app_mvvm/Uitilies/Constant/images.dart';
 
 import 'package:shopping_app_mvvm/Uitilies/Constant/sizes.dart';
@@ -26,7 +28,10 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Header
-                const LoginHeader(),
+                const LoginHeader(
+                  title: UTexts.loginTitle,
+                  subTitle: UTexts.loginSubTitle,
+                ),
                 SizedBox(height: USizes.spaceBtwSections),
 
                 // Form
@@ -42,9 +47,14 @@ class LoginScreen extends StatelessWidget {
                 // Buttons
                 UelevatedButton(onPressed: () {}, child: Text(UTexts.signIn)),
                 SizedBox(height: USizes.spaceBtwItems / 2),
-                UelevatedButton(
-                  onPressed: () {},
-                  child: Text(UTexts.createAccount),
+                SizedBox(
+                  width: double.infinity,
+                  child: OutlinedButton(
+                    child: const Text(UTexts.createAccount),
+                    onPressed: () {
+                      Get.to(() => const SignupScreen());
+                    },
+                  ),
                 ),
 
                 SizedBox(height: USizes.spaceBtwSections),
